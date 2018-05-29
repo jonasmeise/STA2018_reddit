@@ -1,4 +1,4 @@
-import java.io.IOException;
+﻿import java.io.IOException;
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -12,6 +12,8 @@ public class DifficultyEvaluator {
 	public String[] noise = {"(",")",".",",","(","!","?",";",":", "\n", "\r"};
 	
 	public static void main(String[] args) {
+
+		//RUN CONTROLLER.JAVA AS THE MAIN PROGRAM
 		DifficultyEvaluator df = new DifficultyEvaluator();
 
 		System.out.println(df.startsWithCaps("Test"));
@@ -20,76 +22,6 @@ public class DifficultyEvaluator {
 		System.out.println(df.startsWithCaps(" Test"));
 		
 		ArrayList<String> testList = new ArrayList<String>();
-		testList.add("Philosophy is the study of humans and the world by thinking and asking questions. It is a science and an art. Philosophy tries to answer important questions by coming up with answers about real things and asking \"why?\"\r\n" + 
-				"\r\n" + 
-				"Sometimes, philosophy tries to answer the same questions as religion and science. Philosophers do not all give the same answers to questions. Some people think there are no right answers in philosophy, only better answers and worse answers. Many types of philosophy criticize or even attack the beliefs of science and religion.\r\n" + 
-				"\r\n" + 
-				"In his work Critique of Pure Reason, Immanuel Kant asked the following questions:[2]\r\n" + 
-				"\r\n" + 
-				"What can I say?\r\n" + 
-				"What shall I do?\r\n" + 
-				"What dare I hope?\r\n" + 
-				"What is man?\r\n" + 
-				"The answers to these questions gives the different domains or categories of philosophy.\r\n" + 
-				"\r\n" + 
-				"Categories in philosophy\r\n" + 
-				"Philosophy can be divided into different groups, based on the types of questions that it asks. Below is a list of questions split into groups. One possible list of answers to these questions can be called a 'philosophy'. There are many different 'philosophies', because all of these questions have many different answers according to different people. Not all philosophies ask the same questions. These are the questions that are usually asked by philosophers from the Western world:\r\n" + 
-				"\r\n" + 
-				"Metaphysics:\r\n" + 
-				"\r\n" + 
-				"Metaphysics is sometimes split up into ontology (the philosophy of real life and living things), the philosophy of mind and the philosophy of religion; but these sub-branches are very close together.\r\n" + 
-				"\r\n" + 
-				"Ontology:\r\n" + 
-				"\r\n" + 
-				"What is the world that we see around us? (What is reality?)\r\n" + 
-				"Is there more to the world than just what we see or hear?\r\n" + 
-				"If nobody sees something happening, does that mean that it did not happen?\r\n" + 
-				"What does it mean to say that something is possible? Do other worlds exist?\r\n" + 
-				"Is there anything very special about being a human being or being alive at all?\r\n" + 
-				"If not, why do some people think that there is?\r\n" + 
-				"What is space? What is time?\r\n" + 
-				"The philosophy of mind:\r\n" + 
-				"\r\n" + 
-				"What is a mind?\r\n" + 
-				"What is a body?\r\n" + 
-				"What is consciousness?\r\n" + 
-				"Do people make choices, or can they only choose to do one thing? (Do people have free will?)\r\n" + 
-				"What makes words or ideas meaningful? (What is the relation between meaningful words or ideas and the things that they mean?)\r\n" + 
-				"The philosophy of religion:\r\n" + 
-				"\r\n" + 
-				"Do people have souls?\r\n" + 
-				"Is there a God who created the Universe?\r\n" + 
-				"In epistemology:\r\n" + 
-				"\r\n" + 
-				"What is knowledge?\r\n" + 
-				"How can we know anything?\r\n" + 
-				"What is science?\r\n" + 
-				"What is truth?\r\n" + 
-				"In ethics:\r\n" + 
-				"\r\n" + 
-				"What are right and wrong, good and bad?\r\n" + 
-				"Should people do some things and not others?\r\n" + 
-				"What is justice?\r\n" + 
-				"In aesthetics:\r\n" + 
-				"\r\n" + 
-				"What is beauty? What if one person thinks a painting is beautiful, but another person thinks the painting is ugly? Can the painting be beautiful and ugly at the same time?\r\n" + 
-				"Are true things beautiful?\r\n" + 
-				"Are good things beautiful?\r\n" + 
-				"What is art? We commonly think that a sculpture in a museum is art. If a sculptor sculpts a sculpture of a rock from clay, and puts it in a museum, many would call it art. But what if a person picks up a rock from the ground - is the rock a piece of art?\r\n" + 
-				"In logic:\r\n" + 
-				"\r\n" + 
-				"What do the words we use mean?\r\n" + 
-				"How can we say things (especially ideas) in a way that only has one meaning?\r\n" + 
-				"Can all ideas be expressed using language?\r\n" + 
-				"How does the truth of an argument's premise affect the truth of its conclusion?\r\n" + 
-				"How can we reason correctly?\r\n" + 
-				"In axiology:\r\n" + 
-				"\r\n" + 
-				"What has value?\r\n" + 
-				"Is time really money? or have we made it so?\r\n" + 
-				"Does love, beauty, or justice hold any value?\r\n" + 
-				"Other divisions include eschatology, teleology and theology. In past centuries natural science was included in philosophy, and called \"natural philosophy\".");
-		
 		
 		ArrayList<String> sentences = df.sentenceSplitter(testList);
 		for(String sentence : sentences) {
@@ -106,7 +38,7 @@ public class DifficultyEvaluator {
 		
 		Dictionary myDic = new Dictionary();
 		try {
-			myDic.loadFromFile("C:\\Users\\Jonas\\Downloads\\STA\\basicenglish.txt");
+			myDic.loadFromFile(".\\basicenglish.txt");
 			
 			System.out.print(df.findDifficultWords(testList, myDic).toString());
 			

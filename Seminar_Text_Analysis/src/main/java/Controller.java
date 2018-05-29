@@ -6,10 +6,12 @@ import type.Post;
 public class Controller {
 	
 	public static void main(String[] args) throws IOException {
-		String fileurl = "C:\\Users\\Jonas\\eclipse-workspace\\1\\output_askscience.txt";
+		//MAIN PROGRAM, EDIT DATA DEPENDING ON WHICH DATA TO READ -> CURRENTLY TAG-ORIENTED
+
+		String fileurl = "data_askscience.txt";
 		
 		Dictionary myDic = new Dictionary();
-		myDic.loadFromFile("C:\\Users\\Jonas\\Downloads\\STA\\basicenglish.txt");
+		myDic.loadFromFile(".\\basicenglish.txt");
 		
 		Reader myReader = new Reader();
 		DifficultyEvaluator myEval = new DifficultyEvaluator();
@@ -66,10 +68,10 @@ public class Controller {
 				}
 			}
 			
-			/*avgFlesch = myEval.evalFleschGrade(subList);
+			avgFlesch = myEval.evalFleschGrade(subList);
 			avgSMOG = myEval.evalSMOG(subList);
 			avgCLI = myEval.evalCLI(subList);
-			diffWordCount = myEval.findDifficultWords(subList,myDic).size();*/
+			diffWordCount = myEval.findDifficultWords(subList,myDic).size();
 			
 			ArrayList<String> avgAbb = new ArrayList<String>();
 			

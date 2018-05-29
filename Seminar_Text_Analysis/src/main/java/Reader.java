@@ -13,7 +13,9 @@ public class Reader {
 	public ArrayList<Post> allPosts = new ArrayList<Post>();
 	
 	public static void main(String[] args) {
-		String fileurl = "C:\\Users\\Jonas\\eclipse-workspace\\1\\output.txt";
+		//RUN CONTROLLER.JAVA AS THE MAIN PROGRAM
+
+		String fileurl = ".\\data_eli5.txt";
 		
 		Reader myReader = new Reader();
 		try {

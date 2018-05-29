@@ -13,8 +13,8 @@ import com.mashape.unirest.http.exceptions.UnirestException;
 public class Crawler2 
 {
 	public String headerName = "test-script/0.1 by luxu5";
-	public String basicAuthUser = "6NqNBqpFrSf2zQ";
-	public String basicAuthPw = "gIyBp-ecZR0QYTkgW3lDGOb2ReM";
+	public String basicAuthUser = "xxxxxxxxxxxxxx";
+	public String basicAuthPw = "xxxxxxxxxxxxxxxxxxxxxxxxxxx";
 	
 	public String filename = "output.txt";
 	
@@ -24,6 +24,7 @@ public class Crawler2
 	
 	
 	public static void main(String[] Args) {
+		//RUN CONTROLLER.JAVA AS THE MAIN PROGRAM
 		Crawler2 mycrawler = new Crawler2();
 
 		mycrawler.crawl();
@@ -65,23 +66,12 @@ public class Crawler2
 		}
 	}
 	
-	/*public void login() throws UnirestException {
-		HttpResponse<JsonNode> jsonResponse = Unirest.post("https://www.reddit.com/api/v1/access_token")
-				  .header("User-Agent", "test-script/0.1 by luxu5")
-				  .field("grant_type", "client_credentials" )
-				  .basicAuth("6NqNBqpFrSf2zQ", "gIyBp-ecZR0QYTkgW3lDGOb2ReM")
-				  .asJson();
-		
-		System.out.println(jsonResponse.getBody() + " " + jsonResponse.getStatusText() + " " + jsonResponse.getStatus() + " " + jsonResponse.getRawBody().toString() );
-	}*/
-	
-	
 	public JsonNode getJsonFromURL(String url) throws UnirestException {
 		try {
 		HttpResponse<JsonNode> jsonResponse = Unirest.get(url)
 				  .header("User-Agent", headerName)
 				  /*.field("grant_type", "client_credentials" )
-				  .basicAuth("6NqNBqpFrSf2zQ", "gIyBp-ecZR0QYTkgW3lDGOb2ReM")*/
+				  .basicAuth(basicAuthUser, basicAuthPw)*/
 				  .asJson();
 		
 		//"url": ... " 

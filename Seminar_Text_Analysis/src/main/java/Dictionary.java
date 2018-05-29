@@ -6,9 +6,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class Dictionary {
-
-	ArrayList<String> wordList;
+	//RUN CONTROLLER.JAVA AS THE MAIN PROGRAM
 	
+	ArrayList<String> wordList;
+
 	public Dictionary() {
 		wordList = new ArrayList<String>();
 	}
