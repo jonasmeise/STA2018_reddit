@@ -1,5 +1,4 @@
 ########ASKSCIENCE 1733 total comments
-
 Tag: 0
 Flesch: 8.406261437599415
 SMOG: 8.270098064862571
